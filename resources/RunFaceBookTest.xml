@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite  name="FaceBook">
+
+<Listeners>
+<Listener class-name ="commons.MethodListener"></Listener>
+</Listeners>
+ <parameter name="url" value="https://www.facebook.com/"/>
+  <test name="Run on firefox">
+  <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.facebook.register.Level_13_Verify_Undisplayed"/>
+    </classes>
+  </test>   
+</suite> 
