@@ -19,9 +19,9 @@ import PageObjects.Nopcomerce.User.UserRewardPointPageObject;
 import commons.BaseTest;
 import commons.PageGeneratorManager;
 
-public class Level_07_Switch_Page extends BaseTest {
+public class Level_07_Switch_Page extends BaseTest { 
 
-	private WebDriver driver;
+	public WebDriver driver;
 	private String firstName;
 	private String lastName;
 	private String emailAdress;

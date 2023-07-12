@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <suite  name="NopComerce">
+
 <Listeners>
-		<Listener class-name ="commons.MethodListener"/>
-        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+		<Listener class-name ="commons.MethodListener"/> 
+		<Listener class-name ="ReportConfig.ReportNGListener"/> 
+		<Listener class-name ="ReportConfig.ExtentTestListener"/> 
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/> 
 </Listeners>
- <parameter name="url" value="https://demo.nopcommerce.com/register?returnUrl=%2F"/>
+
   <test name="Run on firefox">
   <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.nopcomerce.user.Level_02_Apply_BasePage_I"/>
+
+      <class name="com.nopcomerce.user.Level_15_ExtentV5_Screenshot2"/>
     </classes>
   </test>   
 </suite> 

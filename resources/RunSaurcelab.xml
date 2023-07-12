@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite  name="Saurcelab">
+<!-- <Listeners>
+		<Listener class-name ="commons.MethodListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</Listeners> -->
+ <parameter name="appUrl" value="https://www.saucedemo.com/"/>
+  <test name="Run on firefox">
+  <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.saurcelab.level_19_Sort_Asc_Desc"/>
+    </classes>
+  </test>   
+</suite> 

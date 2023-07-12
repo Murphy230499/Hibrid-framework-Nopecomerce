@@ -31,7 +31,7 @@ public class Level_14_Log_And_ReportNG extends BaseTest {
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		firstName = "Automation";
 		lastName = "FC";
-		emailAdress = "" + generateFakeNumber() + "@gmail.com";
+		emailAdress = "afc" + generateFakeNumber() + "@gmail.com";
 		Password = "123456";
 	}
 
@@ -49,7 +49,7 @@ public class Level_14_Log_And_ReportNG extends BaseTest {
 		log.info("Register_Step 03: Enter to LastName Textbox with values '"+ lastName+"'" );	
 		registerPage.inputToLastNameTextBox(lastName);
 		
-		log.info("Register_Step 04: Enter to emailadress Textbox with values '"+ emailAdress+"'" );	
+		log.info("Register_Step 04: Enter to emailaddress Textbox with values '"+ emailAdress+"'" );	
 		registerPage.inputToEmailTextBox(emailAdress);
 		
 		log.info("Register_Step 05: Enter to password Textbox with values '"+ Password+"'" );	
@@ -61,17 +61,16 @@ public class Level_14_Log_And_ReportNG extends BaseTest {
 		log.info("Register_Step 07: click to register Button" );	
 		registerPage.clickToRegisterButton();
 		
-		log.info("Register_Step 08: verify register sucess Massage is displayed");	
-		verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed..");
+		log.info("Register_Step 08: verify register success Massage is displayed");	
+		verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 		
-		log.info("Register_Step 09: Click to logout link" );	
-		homePage = registerPage.clickToLogOutLink();
 
 		
 	}
 	
 	@Test
 	public void User_02_Login() {
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 		log.info("Login_Step 01: Navigate to login page" );	
 		loginPage = homePage.clickToLoginLink();
 		
@@ -85,13 +84,13 @@ public class Level_14_Log_And_ReportNG extends BaseTest {
 		homePage = loginPage.clickLoginButton();
 		
 		log.info("Login_Step 05: verify my account link display" );
-		verifyFalse(homePage.isMyaccountLinkDisplayed());
+		verifyTrue(homePage.isMyaccountLinkDisplayed());
 
 		log.info("Login_Step 06: Navigate to customer infor page" );	
 		customerInforPage = homePage.clickToMyAccountLink();
 		
 		log.info("Login_Step 07: verify my account page displayed" );		
-		verifyFalse(customerInforPage.isMyAccountPageDisplay());
+		verifyTrue(customerInforPage.isMyAccountPageDisplay());
 	}
 
 	@AfterClass

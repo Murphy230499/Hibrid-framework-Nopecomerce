@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite  name="Wordpress">
+<!-- <Listeners>
+		<Listener class-name ="commons.MethodListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</Listeners> -->
+ <parameter name="urlAdmin" value="http://localhost:86/wp-admin//"/>
+  <parameter name="urlUser" value="http://localhost:86/"/>
+  <test name="Run on firefox">
+  <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.wordpress.Post_01_Create_Read_Update_Delete_Search_Post"/>
+    </classes>
+  </test>   
+</suite> 

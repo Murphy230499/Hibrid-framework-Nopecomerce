@@ -1,0 +1,12 @@
+{
+"firstName" : "Dinh Duc",
+"lastName" : "Le",
+"emailAdress" : "duclivegiolinh",
+"password" : "12346",
+
+
+"login" : {
+ "userName" : "Automation",
+ "password" : "1234678"
+}
+}

@@ -21,34 +21,36 @@ import commons.PageGeneratorManager;
 
 public class Level_09_Dynamic_Locator extends BaseTest { 
 
-	private WebDriver driver;
-	private String firstName;
-	private String lastName;
-	private String emailAdress;
-	private String Password;
-	private UserHomePageObject homePage;
-	private UserRegisterPageObject registerPage;
-	private UserLoginPageObject loginPage;
-	private UserCustomerInforPageObject customerInforPage;
-	private UserAdressPageObject adressPage;
-	private UserRewardPointPageObject rewardPointPage;
-	private UserMyProductReviewPageObject myProductReviewPage;
+	public static WebDriver driver;
+	public String firstName;
+	public String lastName;
+	public String emailAdress;
+	public String Password;
+	public UserHomePageObject homePage;
+	public UserRegisterPageObject registerPage;
+	public UserLoginPageObject loginPage;
+	public UserCustomerInforPageObject customerInforPage;
+	public UserAdressPageObject adressPage;
+	public UserRewardPointPageObject rewardPointPage;
+	public UserMyProductReviewPageObject myProductReviewPage;
 
-	@Parameters({"browser","url"})
+	@Parameters("browser")
 	@BeforeClass
-	public void beforeClass(String browserName, String appUrl) {
-		driver = getBrowserDriver(browserName, appUrl);
+	public void beforeClass(String browserName) {
+		driver = getBrowserDriver(browserName);
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 		firstName = "Automation";
 		lastName = "FC";
 		emailAdress = "" + generateFakeNumber() + "@gmail.com";
 		Password = "123456";
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://demo.nopcommerce.com/");
-	}
+//		driver.get("https://demo.nopcommerce.com/");
+	} 
+		
 
 	@Test
 	public void User_01_Register_Login() {
+		System.out.println("driver =" + driver );
 		registerPage=homePage.clickRegisterLink();
 		registerPage.inputToFirstNameTextBox(firstName);
 		registerPage.inputToLastNameTextBox(lastName);
