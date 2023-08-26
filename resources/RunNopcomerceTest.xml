@@ -5,8 +5,8 @@
 		<Listener class-name ="commons.MethodListener"/> 
 		<Listener class-name ="ReportConfig.ReportNGListener"/> 
 		<Listener class-name ="ReportConfig.ExtentTestListener"/> 
-		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
-        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/> 
+		<!-- <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>  -->
 </Listeners>
 
   <test name="Run on firefox">
